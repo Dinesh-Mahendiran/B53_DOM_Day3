@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Hi Hello Welcome to rainy and dreezy morning</h1> 
+    <span></span>
+    <textarea id="textarea" name="Input area" rows="10" cols="20"></textarea>
+    <span></span>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+script.js
+
+const element=document.querySelector("h1");
+element.addEventListener("click",foo);
+
+function foo(e)
+{
+    const ele=document.querySelector("span");
+    ele.innerHTML=`Coordinates of X:${e.pageX} and y=${e.pageY}`;
+}
+
+
+
+//Text area
+
+const textelement=document.getElementById("textarea");
+textelement.addEventListener("input",(element)=>{
+    document.querySelector("span").innerHTML=`Characters of textarea :${element.target.value.length}`;
+   
+})
